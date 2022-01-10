@@ -34,44 +34,46 @@ export default function ExploreByArea() {
   return (
     <>
       <Header title="Explorar Origem" />
-      <select
-        data-testid="explore-by-area-dropdown"
-        onChange={ handleSelectChange }
-      >
-        {recipesArea.length > 0
-          && recipesArea.map((area) => (
-            <option key={ area } value={ area } data-testid={ `${area}-option` }>
-              {area}
-            </option>
-          ))}
-      </select>
-      <div className="recipes-cards">
-        {recipesByArea.length > 0
-          && recipesByArea
-            .slice(0, MAX_RECIPES_AREA)
-            .map(
-              ({ strMealThumb, strMeal, idMeal }, index) => (
-                <Link key={ index } to={ `/comidas/${idMeal}` }>
-                  <div
-                    data-testid={ `${index}-recipe-card` }
-                    className="recipe-card"
-                  >
-                    <img
-                      src={ strMealThumb }
-                      alt=""
-                      data-testid={ `${index}-card-img` }
-                    />
-                    <p
-                      data-testid={ `${index}-card-name` }
-                      className="recipe-name"
+      <section className="explore-area-wrapper">
+        <select
+          data-testid="explore-by-area-dropdown"
+          onChange={ handleSelectChange }
+        >
+          {recipesArea.length > 0
+            && recipesArea.map((area) => (
+              <option key={ area } value={ area } data-testid={ `${area}-option` }>
+                {area}
+              </option>
+            ))}
+        </select>
+        <div className="recipes-cards">
+          {recipesByArea.length > 0
+            && recipesByArea
+              .slice(0, MAX_RECIPES_AREA)
+              .map(
+                ({ strMealThumb, strMeal, idMeal }, index) => (
+                  <Link key={ index } to={ `/comidas/${idMeal}` }>
+                    <div
+                      data-testid={ `${index}-recipe-card` }
+                      className="recipe-card"
                     >
-                      {strMeal}
-                    </p>
-                  </div>
-                </Link>
-              ),
-            )}
-      </div>
+                      <img
+                        src={ strMealThumb }
+                        alt=""
+                        data-testid={ `${index}-card-img` }
+                      />
+                      <p
+                        data-testid={ `${index}-card-name` }
+                        className="recipe-name"
+                      >
+                        {strMeal}
+                      </p>
+                    </div>
+                  </Link>
+                ),
+              )}
+        </div>
+      </section>
       <Footer />
     </>
   );

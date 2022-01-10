@@ -6,11 +6,30 @@
 }
 
 .explore-btn-container button {
-  background-color: var(--main-purple);
-  border: none;
+  background-color: transparent;
+  border: 2px solid #ff416c;
   border-radius: 5px;
-  color: #fefefe;
-  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #ff416c;
+  height: 50px;
   margin: 20px;
-  width: 200px;
+  width: 250px;
+}
+
+.explore-area-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.explore-area-wrapper select {
+  background-color: transparent;
+  border: 1px solid #ff416c;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  height: 42px;
+  margin-bottom: 20px;
+  padding: 3px 7px;
+  width: 250px;
 }

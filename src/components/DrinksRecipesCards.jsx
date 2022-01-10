@@ -10,7 +10,13 @@ export default function DrinksRecipesCards({
   return recipes
     .slice(0, maxRecipes)
     .map(({ strDrinkThumb, strDrink, idDrink }, index) => (
-      <Link key={ index } to={ `/bebidas/${idDrink}` }>
+      <Link
+        key={ index }
+        to={ `/bebidas/${idDrink}` }
+        data-aos="fade-up"
+        data-aos-once
+        data-aos-delay={ 100 }
+      >
         <div data-testid={ `${index}-${testId}` } className="recipe-card">
           <img src={ strDrinkThumb } alt="" data-testid={ `${index}-card-img` } />
           <p data-testid={ `${index}-${titleTestId}` } className="recipe-name">

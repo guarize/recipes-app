@@ -5,30 +5,32 @@
   justify-content: space-around;
   margin: auto;
   margin-bottom: 70px;
-  width: 90vw;
+  width: 100vw;
 }
 
 .ingredient-card {
   align-items: center;
   border: none;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 30px;
-  width: 18rem;
+  margin: 20px 10px;
+  width: 9rem;
 }
 
 .ingredient-card img {
   border-radius: 10px 10px 0 0;
-  height: 250px;
   margin-bottom: 20px;
-  width: 100%;
+  margin-top: 20px;
+  object-fit: cover;
+  width: 70%;
 }
 
 .ingredient-card p {
   align-self: flex-start;
-  font-size: 24px;
-  margin-left: 20px;
+  font-size: 17px;
+  margin-left: 10px;
 }

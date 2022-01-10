@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Aos from 'aos';
 import Login from './pages/Login';
 import Foods from './pages/Foods';
 import Drinks from './pages/Drinks';
@@ -17,8 +18,13 @@ import ExploreByArea from './pages/ExploreByArea';
 import InProgress from './pages/InProgress';
 import NotFound from './pages/NotFound';
 import ReceitasFeitas from './pages/ReceitasFeitas';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    Aos.init({});
+  }, []);
+
   return (
     <BrowserRouter>
       <RecipesProvider>

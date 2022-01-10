@@ -3,6 +3,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+
+.details-category {
+  align-items: center;
+  color: darkgrey;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  margin: -20px 0 0;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.details-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details-instructions {
+  padding: 20px;
+}
+
+.details-container, .details-category {
+  background-color: #fefefe;
 }
 
 .recommendations-wrapper {
@@ -17,6 +44,9 @@
 
 .details-img {
   max-width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
 .details-video {
@@ -25,7 +55,7 @@
 }
 
 .recommendations-wrapper div {
-  height: 10rem;
+  height: 14rem;
   margin: 10px;
   width: 160px;
 }
@@ -97,4 +127,27 @@
   display: flex;
   justify-content: center;
   margin: auto;
+}
+
+.details-fav-share {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 80px;
+}
+
+.details-title {
+  align-items: center;
+  background-color: #fefefe;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  font-size: 28px;
+  height: 80px;
+  justify-content: center;
+  margin-bottom: 0;
+  margin-top: 320px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }

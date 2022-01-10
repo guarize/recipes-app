@@ -22,13 +22,14 @@
   justify-content: center;
   margin: 30px;
   max-height: 20rem;
-  width: 22rem;
+  width: 18rem;
 }
 
 .recipe-card img {
   border-radius: 5px 5px 0 0;
   height: 250px;
   margin-bottom: 20px;
+  object-fit: cover;
   width: 100%;
 }
 

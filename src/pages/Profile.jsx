@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import '../styles/Profile.css';
 
 export default function Profile() {
   const history = useHistory();
@@ -31,7 +32,7 @@ export default function Profile() {
   return (
     <>
       <Header title="Perfil" searchHidden />
-      <div>
+      <div className="profile-wrapper">
         <p data-testid="profile-email">{userEmail}</p>
         <button
           type="button"

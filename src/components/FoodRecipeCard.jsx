@@ -10,7 +10,13 @@ export default function FoodRecipeCard({
   return recipes
     .slice(0, maxRecipes)
     .map(({ strMealThumb, strMeal, idMeal }, index) => (
-      <Link key={ index } to={ `/comidas/${idMeal}` }>
+      <Link
+        key={ index }
+        to={ `/comidas/${idMeal}` }
+        data-aos="fade-up"
+        data-aos-once
+        data-aos-delay={ 100 }
+      >
         <div data-testid={ `${index}-${testId}` } className="recipe-card">
           <img
             src={ strMealThumb }

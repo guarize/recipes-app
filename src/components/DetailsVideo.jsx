@@ -10,7 +10,12 @@ export default function DetailsVideo({
   return (
     !inProgress
     && recipeType === 'comida' && (
-      <ReactPlayer url={ strYoutube } controls data-testid="video" />
+      <ReactPlayer
+        url={ strYoutube }
+        controls
+        data-testid="video"
+        className="details-video"
+      />
     )
   );
 }

@@ -26,10 +26,10 @@ export default function DetailsMainInfo({
         data-testid="recipe-photo"
         className="details-img"
       />
-      <h2 data-testid="recipe-title">
+      <h2 data-testid="recipe-title" className="details-title">
         {recipeType === 'comida' ? strMeal : strDrink}
       </h2>
-      <p data-testid="recipe-category">
+      <p data-testid="recipe-category" className="details-category">
         {recipeType === 'comida' ? strCategory : strAlcoholic}
       </p>
     </>

@@ -3,8 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 20px;
-  padding-top: 130px;
+  margin-bottom: 5px;
 }
 
 .food-categories button, .drink-categories button {
@@ -26,5 +25,15 @@
     height: 40px;
     margin: 10px;
     width: 150px;
+  }
+}
+
+@media only screen and ( max-width : 345px ) {
+
+  .food-categories button, .drink-categories button {
+    font-size: 13px;
+    height: 40px;
+    margin: 10px;
+    width: 130px;
   }
 }

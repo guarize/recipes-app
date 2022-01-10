@@ -84,62 +84,68 @@ export default function Details({ inProgress }) {
           recipeType={ recipeType }
           recipe={ recipe }
         />
-        <input
-          type="image"
-          src={ shareIcon }
-          alt="share icon"
-          data-testid="share-btn"
-          onClick={ handleShare }
-        />
-        <input
-          type="image"
-          src={ whiteHeart }
-          alt="favorite icon"
-          data-testid="favorite-btn"
-        />
-        <DetailsIngredients
-          inProgress={ inProgress }
-          ingredients={ ingredients }
-          id={ id }
-          recipeType={ recipeType }
-          completedIngredients={ completedIngredients }
-          setCompletedIngredients={ setCompletedIngredients }
-          measure={ measure }
-        />
-        <p data-testid="instructions">{recipe.strInstructions}</p>
-        <DetailsVideo
-          recipe={ recipe }
-          inProgress={ inProgress }
-          recipeType={ recipeType }
-        />
-        <Recommendations
-          inProgress={ inProgress }
-          recommendations={ recommendations }
-          recipeType={ recipeType }
-        />
-        {inProgress ? (
-          <button
-            type="button"
-            data-testid="finish-recipe-btn"
-            className="details-begin-recipe"
-            disabled={ completedIngredients !== ingredients.length }
-            onClick={ () => {
-              handleCompleteRecipe(recipe, history, recipeInfo);
-            } }
-          >
-            Finalizar receita
-          </button>
-        ) : (
-          <Link to={ `${pathname}/in-progress` }>
+        <section className="details-container">
+          <div className="details-fav-share">
+            <input
+              type="image"
+              src={ shareIcon }
+              alt="share icon"
+              data-testid="share-btn"
+              onClick={ handleShare }
+            />
+            <input
+              type="image"
+              src={ whiteHeart }
+              alt="favorite icon"
+              data-testid="favorite-btn"
+            />
+          </div>
+          <DetailsIngredients
+            inProgress={ inProgress }
+            ingredients={ ingredients }
+            id={ id }
+            recipeType={ recipeType }
+            completedIngredients={ completedIngredients }
+            setCompletedIngredients={ setCompletedIngredients }
+            measure={ measure }
+          />
+          <p data-testid="instructions" className="details-instructions">
+            {recipe.strInstructions}
+          </p>
+          <DetailsVideo
+            recipe={ recipe }
+            inProgress={ inProgress }
+            recipeType={ recipeType }
+          />
+          <Recommendations
+            inProgress={ inProgress }
+            recommendations={ recommendations }
+            recipeType={ recipeType }
+          />
+          {inProgress ? (
             <button
               type="button"
-              data-testid="start-recipe-btn"
+              data-testid="finish-recipe-btn"
               className="details-begin-recipe"
+              disabled={ completedIngredients !== ingredients.length }
+              onClick={ () => {
+                handleCompleteRecipe(recipe, history, recipeInfo);
+              } }
             >
-              Inicar Receita
+              Finalizar receita
             </button>
-          </Link>
-        )}
+          ) : (
+            <Link to={ `${pathname}/in-progress` }>
+              <button
+                type="button"
+                data-testid="start-recipe-btn"
+                className="details-begin-recipe"
+              >
+                Inicar Receita
+              </button>
+            </Link>
+          )}
+        </section>
       </section>
     )
   );
