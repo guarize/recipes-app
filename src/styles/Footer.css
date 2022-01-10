@@ -1,6 +1,7 @@
 .footer-wrapper {
   align-items: center;
-  background-color: var(--main-green);
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  background-color: #1f4037;
   bottom: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   display: flex;
@@ -28,7 +29,8 @@
 }
 
 .footer-wrapper .selected {
-  background-color: #29fd53;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  background-color: #ff416c;
   border: 3px solid #fefefe;
   border-radius: 50%;
   transform: translateY(-26px);

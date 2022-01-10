@@ -4,14 +4,15 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
+  padding-top: 130px;
 }
 
 .food-categories button, .drink-categories button {
-  background-color: var(--main-purple);
-  border: none;
+  background-color: transparent;
+  border: 2px solid #ff416c;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  color: #fefefe;
+  color: #ff416c;
   height: 40px;
   margin: 10px;
   padding: 3px 7px;

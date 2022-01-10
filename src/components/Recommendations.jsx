@@ -10,7 +10,7 @@ export default function Recommendations({
 }) {
   return (
     !inProgress && (
-      <div className="recommentadions-wrapper">
+      <div className="recommendations-wrapper">
         {recommendations.length > 0
           && (recipeType === 'comida' ? (
             <DrinksRecipesCards

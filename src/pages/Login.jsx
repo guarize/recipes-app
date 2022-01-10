@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { AiOutlineUser } from 'react-icons/ai';
+import { RiLockPasswordLine } from 'react-icons/ri';
 import RecipesContext from '../contexts/RecipesContext';
 import deconstructedFoodSvg from '../images/Deconstructed-food.svg';
 import waveSvg from '../images/wave.png';
@@ -55,25 +57,33 @@ export default function Login() {
           className="login-img"
         />
         <form className="login-form">
-          <label htmlFor="email-input">
-            Email
+          {/* <label htmlFor="email-input">
+            Email */}
+          <div className="login-input-container">
+            <AiOutlineUser color="#38d39f" fontSize={ 22 } />
             <input
               type="email"
-              name="email-input"
+              id="email-input"
+              placeholder="E-mail"
               data-testid="email-input"
               autoComplete="false"
               onChange={ handleEmail }
             />
-          </label>
-          <label htmlFor="password-input">
-            Password
+          </div>
+          {/* </label> */}
+          {/* <label htmlFor="password-input">
+            Password */}
+          <div className="login-input-container">
+            <RiLockPasswordLine color="#38d39f" fontSize={ 22 } />
             <input
               type="password"
-              name="password-input"
+              id="password-input"
+              placeholder="Senha"
               data-testid="password-input"
               onChange={ handlePassword }
             />
-          </label>
+          </div>
+          {/* </label> */}
           <button
             type="button"
             data-testid="login-submit-btn"

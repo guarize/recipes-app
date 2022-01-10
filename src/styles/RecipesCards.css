@@ -14,6 +14,7 @@
 
 .recipe-card {
   align-items: center;
+  border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   cursor: pointer;
   display: flex;
@@ -25,6 +26,7 @@
 }
 
 .recipe-card img {
+  border-radius: 5px 5px 0 0;
   height: 250px;
   margin-bottom: 20px;
   width: 100%;
@@ -46,7 +48,7 @@
   }
 }
 
-@media only screen and ( max-width : 375px ) {
+/* @media only screen and ( max-width : 375px ) {
 
   .recipes-cards {
     width: 100vw;
@@ -69,4 +71,4 @@
     height: 60px;
     margin: 0 0 20px 20px;
   }
-}
+} */
