@@ -57,13 +57,13 @@ export default function Details({ inProgress }) {
     .map((element) => element[1]);
 
   const handleShare = () => {
-    const COPIED_MESSAGE = 4000;
+    const COPIED_MESSAGE = 2000;
+    copy(window.location.href);
 
     setIsCopied(true);
     setInterval(() => {
       setIsCopied(false);
     }, COPIED_MESSAGE);
-    copy(window.location.href);
   };
 
   const recipeInfo = {

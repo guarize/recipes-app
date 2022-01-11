@@ -12,7 +12,7 @@ export default function DetailsIngredients({
   measure,
 }) {
   return (
-    <div>
+    <div className="details-ingredients-wrapper">
       <p>Ingredientes</p>
       {inProgress ? (
         <IngredientsProgress
@@ -23,7 +23,7 @@ export default function DetailsIngredients({
           setCompletedIngredients={ setCompletedIngredients }
         />
       ) : (
-        <ul>
+        <ol className="gradient-list">
           {ingredients.map((ingredient, index) => (
             <li
               key={ ingredient }
@@ -32,7 +32,7 @@ export default function DetailsIngredients({
               {`${ingredient} - ${measure[index]}`}
             </li>
           ))}
-        </ul>
+        </ol>
       )}
     </div>
   );

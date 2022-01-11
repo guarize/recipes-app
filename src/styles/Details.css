@@ -25,6 +25,9 @@
 }
 
 .details-instructions {
+  background-color: #eee;
+  font-size: 18px;
+  line-height: 1.5em;
   padding: 20px;
 }
 
@@ -37,7 +40,7 @@
   display: flex;
   height: 20rem;
   justify-content: flex-start;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   max-width: 360px;
   overflow-y: scroll;
 }
@@ -61,16 +64,29 @@
 }
 
 .details-begin-recipe {
+  background-color: #ff416c;
+  border: none;
+  border-radius: 5px;
   bottom: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  color: #fefefe;
+  height: 40px;
+  margin: 10px;
+  padding: 3px 7px;
   position: fixed;
+  width: 200px;
+}
+
+.details-begin-recipe:disabled {
+  opacity: 0.3;
 }
 
 .copied-message {
   align-items: center;
-  background-color: transparent;
-  border: 2px solid var(--main-green);
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  background-color: #1f4037;
   border-radius: 5px;
-  color: #212121;
+  color: #fefefe;
   display: flex;
   font-weight: 700;
   height: 50px;
@@ -141,13 +157,104 @@
   align-items: center;
   background-color: #fefefe;
   border-radius: 40px 40px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   display: flex;
-  font-size: 28px;
-  height: 80px;
+  font-size: 32px;
   justify-content: center;
   margin-bottom: 0;
   margin-top: 320px;
+  min-height: 120px;
   padding-bottom: 10px;
   text-align: center;
   width: 100%;
+}
+
+.details-ingredients-wrapper, .ingredients-progress-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 0 0;
+  width: 90%;
+}
+
+.details-ingredients-wrapper p {
+  font-size: 22px;
+}
+
+.details-ingredients-wrapper ol {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  justify-content: center;
+  list-style: none;
+  padding-left: 1rem;
+  width: 90%;
+}
+
+.details-ingredients-wrapper ol li, .ingredients-progress-wrapper div {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  counter-increment: css-counter 1;
+  margin-top: 30px;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+  width: 100%;
+}
+
+.ingredients-progress-wrapper div input {
+  color: #fe4365;
+  height: 15px;
+  margin-right: 10px;
+  width: 15px;
+}
+
+.ingredients-progress-wrapper div input:checked {
+  animation: tick 150ms ease-in;
+}
+
+.ingredients-progress-wrapper div label {
+  font-size: 18px;
+  margin: 0;
+}
+
+@keyframes tick {
+
+  0% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.details-ingredients-wrapper ol li:before, .details-ingredients-wrapper ol li:after {
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  background-color: #1f4037;
+  border-radius: 1rem 1rem 0;
+  content: '0';
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+
+.details-ingredients-wrapper ol li:before {
+  align-items: flex-end;
+  color: #1d1f20;
+  content: counter(css-counter);
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
 }

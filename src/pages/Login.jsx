@@ -57,8 +57,6 @@ export default function Login() {
           className="login-img"
         />
         <form className="login-form">
-          {/* <label htmlFor="email-input">
-            Email */}
           <div className="login-input-container">
             <AiOutlineUser color="#38d39f" fontSize={ 22 } />
             <input
@@ -70,9 +68,6 @@ export default function Login() {
               onChange={ handleEmail }
             />
           </div>
-          {/* </label> */}
-          {/* <label htmlFor="password-input">
-            Password */}
           <div className="login-input-container">
             <RiLockPasswordLine color="#38d39f" fontSize={ 22 } />
             <input
@@ -83,7 +78,6 @@ export default function Login() {
               onChange={ handlePassword }
             />
           </div>
-          {/* </label> */}
           <button
             type="button"
             data-testid="login-submit-btn"

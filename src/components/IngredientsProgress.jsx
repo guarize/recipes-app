@@ -63,15 +63,10 @@ export default function IngredientsProgress({
 
     const previousList = inProgressRecipes.cocktails[id] || [];
     return previousList.includes(ingredient);
-    // recupera a informação
-    // checar se ta no localStorage (se existe ou é nulo. Se for nulo, significa que não começou ainda a receita e todos os intens são desmarcados)
-    // faz um parse
-    // pega a lista de ingredientes marcados
-    // checar se o ingreditente está na lista ou não
   };
 
   return (
-    <div>
+    <div className="ingredients-progress-wrapper">
       {ingredients.map((ingredient, index) => (
         <div key={ ingredient } data-testid={ `${index}-ingredient-step` }>
           <input
