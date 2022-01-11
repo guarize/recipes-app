@@ -86,19 +86,23 @@ export default function Details({ inProgress }) {
         />
         <section className="details-container">
           <div className="details-fav-share">
-            <input
-              type="image"
-              src={ shareIcon }
-              alt="share icon"
-              data-testid="share-btn"
-              onClick={ handleShare }
-            />
-            <input
-              type="image"
-              src={ whiteHeart }
-              alt="favorite icon"
-              data-testid="favorite-btn"
-            />
+            <div>
+              <input
+                type="image"
+                src={ shareIcon }
+                alt="share icon"
+                data-testid="share-btn"
+                onClick={ handleShare }
+              />
+            </div>
+            <div>
+              <input
+                type="image"
+                src={ whiteHeart }
+                alt="favorite icon"
+                data-testid="favorite-btn"
+              />
+            </div>
           </div>
           <DetailsIngredients
             inProgress={ inProgress }
@@ -127,6 +131,8 @@ export default function Details({ inProgress }) {
               type="button"
               data-testid="finish-recipe-btn"
               className="details-begin-recipe"
+              data-aos="fade-up"
+              data-aos-once
               disabled={ completedIngredients !== ingredients.length }
               onClick={ () => {
                 handleCompleteRecipe(recipe, history, recipeInfo);
@@ -140,6 +146,8 @@ export default function Details({ inProgress }) {
                 type="button"
                 data-testid="start-recipe-btn"
                 className="details-begin-recipe"
+                data-aos="fade-up"
+                data-aos-once
               >
                 Inicar Receita
               </button>

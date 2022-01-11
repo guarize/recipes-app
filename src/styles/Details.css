@@ -22,12 +22,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 99;
 }
 
 .details-instructions {
-  background-color: #eee;
   font-size: 18px;
   line-height: 1.5em;
+  margin-bottom: 30px;
   padding: 20px;
 }
 
@@ -149,8 +150,18 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-  width: 80px;
+  margin: 20px 0;
+  width: 120px;
+}
+
+.details-fav-share div {
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
 }
 
 .details-title {
@@ -159,6 +170,7 @@
   border-radius: 40px 40px 0 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   display: flex;
+  flex-direction: column;
   font-size: 32px;
   justify-content: center;
   margin-bottom: 0;
@@ -169,12 +181,22 @@
   width: 100%;
 }
 
+.details-line {
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  background-color: #1f4037;
+  border-radius: 15px;
+  height: 4px;
+  margin-top: 10px;
+  width: 50px;
+  z-index: 1;
+}
+
 .details-ingredients-wrapper, .ingredients-progress-wrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 0 0;
+  margin: 20px 0;
   width: 90%;
 }
 
@@ -257,4 +279,8 @@
   justify-content: flex-end;
   padding: 0.125em 0.25em;
   z-index: 1;
+}
+
+.details-wrapper .recipe-card {
+  background: #fefefe;
 }

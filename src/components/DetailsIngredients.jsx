@@ -28,6 +28,8 @@ export default function DetailsIngredients({
             <li
               key={ ingredient }
               data-testid={ `${index}-ingredient-name-and-measure` }
+              data-aos="fade-up"
+              data-aos-once
             >
               {`${ingredient} - ${measure[index]}`}
             </li>
