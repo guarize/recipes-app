@@ -30,6 +30,7 @@
   line-height: 1.5em;
   margin-bottom: 30px;
   padding: 20px;
+  text-align: justify;
 }
 
 .details-container, .details-category {
