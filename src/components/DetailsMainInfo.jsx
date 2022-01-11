@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { BsArrowLeftCircleFill } from 'react-icons/bs';
 
 export default function DetailsMainInfo({
   isCopied,
@@ -20,18 +22,21 @@ export default function DetailsMainInfo({
           <p>Link copiado!</p>
         </div>
       )}
+      <Link to={ `/${recipeType}s` } className="previous-button">
+        <BsArrowLeftCircleFill fontSize={ 34 } color="#99f2c8" />
+      </Link>
       <img
         src={ recipeType === 'comida' ? strMealThumb : strDrinkThumb }
         alt="recipe thumb"
         data-testid="recipe-photo"
         className="details-img"
       />
-      <h2 data-testid="recipe-title" className="details-title">
-        <h2 data-aos="fade-right" data-aos-once>
+      <div className="details-title">
+        <h2 data-testid="recipe-title" data-aos="fade-right" data-aos-once>
           {recipeType === 'comida' ? strMeal : strDrink}
         </h2>
         <div className="details-line" />
-      </h2>
+      </div>
       <p data-testid="recipe-category" className="details-category">
         {recipeType === 'comida' ? strCategory : strAlcoholic}
       </p>

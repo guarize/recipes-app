@@ -9,6 +9,7 @@ export default function FoodRecipeCard({
 }) {
   return recipes
     .slice(0, maxRecipes)
+    .reverse()
     .map(({ strMealThumb, strMeal, idMeal }, index) => (
       <Link
         key={ index }
