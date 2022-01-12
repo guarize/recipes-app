@@ -21,10 +21,10 @@
 @media only screen and ( max-width : 428px ) {
 
   .food-categories button, .drink-categories button {
-    font-size: 15px;
+    font-size: 13px;
     height: 40px;
     margin: 10px;
-    width: 150px;
+    width: 130px;
   }
 }
 

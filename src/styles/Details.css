@@ -282,10 +282,6 @@
   z-index: 1;
 }
 
-.details-wrapper .recipe-card {
-  background: #fefefe;
-}
-
 .previous-button {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;

@@ -34,8 +34,11 @@
 
 .favorite-recipe {
   align-items: center;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  backdrop-filter: blur(5px);
+  background: rgb(153, 242, 200, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
@@ -43,7 +46,7 @@
 }
 
 .favorite-recipe-preview {
-  border-radius: 5px 0 0 5px;
+  border-radius: 16px 0 0 16px;
   max-width: 50%;
 }
 
@@ -65,7 +68,7 @@
 }
 
 .favorite-title {
-  background-color: #fefefe;
+  background-color: transparent;
   border: none;
   font-size: 20px;
   text-align: left;
