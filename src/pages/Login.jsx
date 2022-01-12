@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AiOutlineUser } from 'react-icons/ai';
 import { RiLockPasswordLine } from 'react-icons/ri';
@@ -10,8 +10,7 @@ import '../styles/Login.css';
 export default function Login() {
   const history = useHistory();
 
-  const {
-    isValidEmail,
+  const { isValidEmail,
     setValidEmail,
     isValidPassword,
     setValidPassword,
@@ -43,6 +42,14 @@ export default function Login() {
     localStorage.setItem('mealsToken', '1');
     localStorage.setItem('cocktailsToken', '1');
     localStorage.setItem('user', JSON.stringify({ email: emailValue || '' }));
+    localStorage.setItem(
+      'inProgressRecipes',
+      JSON.stringify({
+        cocktails: {},
+        meals: {},
+      }),
+    );
+    localStorage.setItem('doneRecipes', JSON.stringify([]));
 
     history.push('/comidas');
   };

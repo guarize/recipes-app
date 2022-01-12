@@ -45,6 +45,8 @@ export const checkInProgressRecipes = (type, id) => {
     localStorage.getItem('inProgressRecipes'),
   );
 
+  if (!Object.keys(inProgressRecipes).length) return 0;
+
   if (inProgressRecipes[type][id]) return inProgressRecipes[type][id].length;
 
   return 0;
