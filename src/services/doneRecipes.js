@@ -12,7 +12,7 @@ const handleCompleteRecipe = (recipe, history, recipeInfo) => {
       {
         ...recipeInfo,
         doneDate: new Date().toLocaleDateString(),
-        tags: recipe.strTags.split(',') || '',
+        tags: recipe.strTags ? recipe.strTags.split(',') : '',
       },
     ]),
   );
