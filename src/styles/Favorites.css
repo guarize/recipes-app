@@ -48,6 +48,7 @@
 .favorite-recipe-preview {
   border-radius: 16px 0 0 16px;
   max-width: 50%;
+  position: relative;
 }
 
 .favorite-recipe-info {
@@ -100,4 +101,30 @@
   height: 35px;
   justify-content: center;
   width: 35px;
+}
+
+.favorite-done-date {
+  background: linear-gradient(to right, #1f4037, #99f2c8);
+  background-color: #1f4037;
+  border-radius: 5px;
+  color: #fefefe;
+  left: 10px;
+  padding: 3px 7px;
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+}
+
+.favorite-tags {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  overflow-y: scroll;
+  width: 90%;
+}
+
+.favorite-tags p {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  padding: 1px 3px;
 }

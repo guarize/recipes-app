@@ -17,7 +17,7 @@ import ExploreFoodIngredients from './pages/ExploreFoodIngredients';
 import ExploreByArea from './pages/ExploreByArea';
 import InProgress from './pages/InProgress';
 import NotFound from './pages/NotFound';
-import ReceitasFeitas from './pages/ReceitasFeitas';
+import DoneRecipes from './pages/DoneRecipes';
 import 'aos/dist/aos.css';
 import FavoriteRecipes from './pages/FavoriteRecipes';
 
@@ -67,7 +67,7 @@ function App() {
           <Route
             exact
             path="/receitas-feitas"
-            component={ ReceitasFeitas }
+            component={ DoneRecipes }
           />
           <Route exact path="/receitas-favoritas" component={ FavoriteRecipes } />
           <Route exact path="*" component={ NotFound } />
