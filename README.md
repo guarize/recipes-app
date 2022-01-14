@@ -18,7 +18,6 @@ The layout is focused on mobile devices.
     - [Links](#links)
     - [Built with](#built-with)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -58,7 +57,3 @@ Users should be able to:
 - [Thomaz Jefferson](https://github.com/thomazjeffersonlima)
 - [Victor Martins](https://github.com/VictorMartinsDuarte)
 - [Alex Sandro Chaves](https://github.com/AlexSChaves)
-
-## Acknowledgments
-
-
